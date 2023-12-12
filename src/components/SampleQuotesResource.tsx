@@ -54,7 +54,7 @@ export default function SampleView() {
 				}
 				{loading === false && (
 					quotes?.map((quote: any) => (
-						<div className="h-60 w-96 bg-gray-200 rounded-xl flex flex-col items-center justify-center p-2">
+						<div className="h-60 w-96 bg-gray-200 backdrop-blur-xl bg-opacity-30 rounded-xl flex flex-col items-center justify-center p-2">
 							<p className="text-xs">{quote?.quote}</p>
 							<h1 className="font-bolx text-orange-600">{quote?.author}</h1>
 							<p className="font-bold bg-orange-600 p-2 rounded-xl bottom-0 left-0 text-white text-xs">{quote?.category}</p>
