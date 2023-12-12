@@ -1,8 +1,15 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Nav from "../components/Nav.astro";
+import SampleView from "../components/SampleQuotesResource";
 ---
 
 <MainLayout title="Quotes">
-  <div class="h-full w-full"></div>
+  <img
+    class="absolute h-[100%] ml-[20%] flex opacity-20"
+    src="/src/assets/astrobg.png"
+    alt=""
+  />
+  <div class="h-full w-full">
+    <SampleView client:load />
+  </div>
 </MainLayout>

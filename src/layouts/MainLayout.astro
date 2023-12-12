@@ -14,7 +14,9 @@ const { title } = Astro.props;
   </head>
   <body>
     <main class="max-h-auto h-screen w-screen flex flex-wrap px-6 py-10">
-      <Nav />
+      <div class="relative w-screen flex items-center justify-center">
+        <Nav />
+      </div>
       <slot />
     </main>
   </body>
