@@ -1,5 +1,6 @@
 ---
 import Nav from "../components/Nav.astro";
+import FooterLayout from "./FooterLayout.astro";
 
 const { title } = Astro.props;
 ---
@@ -13,11 +14,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main class="max-h-auto h-screen w-screen flex flex-wrap px-6 py-10">
-      <div class="relative w-screen flex items-center justify-center">
+    <main class="min-h-screen h-auto w-screen flex flex-wrap px-6 py-10">
+      <div class="relative w-full flex items-center justify-center">
         <Nav />
       </div>
       <slot />
     </main>
+    <FooterLayout />
   </body>
 </html>
