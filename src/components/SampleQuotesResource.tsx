@@ -1,8 +1,6 @@
 import React from "react";
 import axios from "axios";
-
 import { categories } from "../constants/categories";
-
 
 export default function SampleView() {
 	const [quoteCategory, setQuoteCategory] = React.useState<string>('happiness');
