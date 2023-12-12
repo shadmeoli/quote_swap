@@ -51,6 +51,11 @@ If you'd like to contribute to QuoteSwap, please follow these guidelines:
 
 5. Open a pull request.
 
+
+### Color pallete
+
+![swap](https://github.com/shadmeoli/quote_swap/assets/85517013/19ec57c7-61db-46f1-8417-288e20747056)
+
 ## Feedback and Issues
 
 If you encounter any issues or have suggestions for improvement, feel free to open an issue on the GitHub repository.
