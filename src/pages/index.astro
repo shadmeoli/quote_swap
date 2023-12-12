@@ -1,16 +1,29 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import Nav from "./components/Nav.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>QuoteSwap</title>
-  </head>
-  <body>
-    <h1>QuoteSwap</h1>
-  </body>
-</html>
+<MainLayout title="Home">
+  <div class="h-full w-full">
+    <div
+      class="h-full w-full flex flex-col items-center justify-center space-y-4"
+    >
+      <h1 class="text-gray-600 text-xl font-bold">Create quoted image</h1>
+      <div class="flex flex-row h-16">
+        <input
+          class="h-full p-2 rounded w-80 text-gray-600 bg-gray-100"
+          placeholder="Enter your quore here"
+          type="text"
+        />
+        <button
+          class="h-full p-2 bg-blue-600 hover:bg-blue-600 active:bg-purple-600 text-white font-bold w-20"
+          >create</button
+        >
+      </div>
+      <div
+        class="h-[60%] w-[60%] bg-gray-200 rounded flex flex-col items-center jusity-center"
+      >
+      </div>
+    </div>
+  </div>
+</MainLayout>
