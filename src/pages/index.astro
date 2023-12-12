@@ -5,6 +5,13 @@ import QuoteView from "../components/QuoteCreation";
 
 <MainLayout title="Home">
   <div class="h-full w-full">
-    <QuoteView client:load />
+    <img
+      class="absolute h-96 flex ml-[40%] opacity-20"
+      src="/src/assets/astrobg.png"
+      alt=""
+    />
+    <div class="relative mt-60">
+      <QuoteView client:load />
+    </div>
   </div>
 </MainLayout>

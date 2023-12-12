@@ -16,7 +16,16 @@ export default function QuoteView() {
 
 	const [selectedTheme, setSelectedTheme] = React.useState<string>(Theme.orange);
 
+	function handleColorChange(event: React.ChangeEvent<HTMLInputElement>) {
+		console.log(event.target.id);
+		setSelectedTheme(Theme[event.target.id]);
+	}
 
+	function handleQuoteCreation() {
+		setQuoteText("")
+		setSignature("")
+		alert("Quote created")
+	}
 
 	return (
 		<>
@@ -34,6 +43,7 @@ export default function QuoteView() {
 					/>
 					<button
 						className="h-full p-2 bg-orange-600 hover:bg-orange-500 active:bg-red-600 text-white font-bold w-20"
+						onClick={() => handleQuoteCreation()}
 					>
 						create
 					</button>
@@ -56,7 +66,7 @@ export default function QuoteView() {
 						<h1 className="text-6xl text-white font-mono">"</h1>
 					</div>
 
-					<h1 className="font-mono text-sm text-orange-200 font-light">{signature}</h1>
+					<h1 className="font-mono text-sm text-gray-200 font-light mt-4">{signature}</h1>
 				</div>
 				<div className="h-20 w-full py-10 flex items-center justify-center space-x-2">
 					<input
@@ -64,18 +74,21 @@ export default function QuoteView() {
 						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-orange-600"
 						name="colorOption"
 						id="orange"
+						onChange={handleColorChange}
 					/>
 					<input
 						type="radio"
 						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-blue-600"
 						name="colorOption"
 						id="blue"
+						onChange={handleColorChange}
 					/>
 					<input
 						type="radio"
 						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-purple-600"
 						name="colorOption"
 						id="purple"
+						onChange={handleColorChange}
 					/>
 				</div>
 
