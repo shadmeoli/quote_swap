@@ -57,6 +57,7 @@ export default function QuoteView() {
 						placeholder="Enter your quote here"
 						type="text"
 					/>
+					{/* TODO -  create a modal for a user to choose a category for the quote */}
 				</div>
 				<div className={selectedTheme}>
 					<div className="flex flex-row items-center justify-center">
