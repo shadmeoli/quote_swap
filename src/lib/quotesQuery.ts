@@ -10,3 +10,5 @@ const API_KEY = import.meta.env.API_KEY;
 
 async function getQuotes() {
 }
+
+export { getQuotes }
