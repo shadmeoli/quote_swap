@@ -5,10 +5,12 @@
  * and moving it here
  */
 import axios from "axios";
+import type { TQuote } from "../interfaces/QuoteT";
 
 const API_KEY = import.meta.env.API_KEY;
 
-async function getQuotes() {
+async function getQuotes(packet: TQuote) {
+    return
 }
 
 export { getQuotes }
