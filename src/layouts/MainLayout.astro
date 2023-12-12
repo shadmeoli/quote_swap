@@ -1,5 +1,5 @@
 ---
-import Nav from "../pages/components/Nav.astro";
+import Nav from "../components/Nav.astro";
 const { title } = Astro.props;
 ---
 
@@ -14,8 +14,7 @@ const { title } = Astro.props;
   <body>
     <main class="max-h-auto h-screen w-screen flex flex-wrap">
       <Nav />
-      <slot><slot /></slot>
+      <slot />
     </main>
   </body>
 </html>
-../components/Nav.astro
