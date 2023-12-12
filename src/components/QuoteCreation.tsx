@@ -59,9 +59,24 @@ export default function QuoteView() {
 					<h1 className="font-mono text-sm text-orange-200 font-light">{signature}</h1>
 				</div>
 				<div className="h-20 w-full py-10 flex items-center justify-center space-x-2">
-					<input className="h-10 w-10 rounded-full border-2 border-black active:bg-orange-600" type="checkbox" name="" id="" />
-					<input className="h-10 w-10 rounded-full border-2 border-black active:bg-blue-600" type="checkbox" name="" id="" />
-					<input className="h-10 w-10 rounded-full border-2 border-black active:bg-purple-600" type="checkbox" name="" id="" />
+					<input
+						type="radio"
+						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-orange-600"
+						name="colorOption"
+						id="orange"
+					/>
+					<input
+						type="radio"
+						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-blue-600"
+						name="colorOption"
+						id="blue"
+					/>
+					<input
+						type="radio"
+						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-purple-600"
+						name="colorOption"
+						id="purple"
+					/>
 				</div>
 
 				<button className="px-10 py-4 bg-black rounded-xl text-white font-bold hover:bg-gray-800 active:bg-orange-600">Donwoad</button>
