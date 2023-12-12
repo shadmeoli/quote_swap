@@ -3,12 +3,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="import">
-  <div class="w-full flex justify-center items-center h-full absolute mt-20">
-    <img
-      class="absolute h-[100%] flex opacity-20"
-      src="/src/assets/astrobg.png"
-      alt=""
-    />
+  <div class="h-full w-full">
+    <div class="w-full flex justify-center items-center h-full absolute mt-20">
+      <img
+        class="absolute object-cover h-[100%] flex opacity-20"
+        src="/src/assets/astrobg.png"
+        alt=""
+      />
+    </div>
+    <div class="relative mt-40"></div>
   </div>
-  <div class="h-full w-full bg-gray-100 flex flex-wrap"></div>
 </MainLayout>
