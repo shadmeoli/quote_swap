@@ -7,7 +7,7 @@ const supabase = createClient(
 );
 
 async function createQuote(packet: TQuote) {
-    return
+    return packet
 }
 
 export { supabase, createQuote }
