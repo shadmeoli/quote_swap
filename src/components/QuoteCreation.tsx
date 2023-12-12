@@ -5,7 +5,8 @@ import quotes from "../assets/quotes.png"
 enum Theme {
 	orange = "h-80 xs:w-[80%] md:w-[50%] bg-gradient-to-br from-orange-600 to-red-400 flex flex-col p-8 items-center justify-center rounded shadow-2xl shadow-gray-400",
 	blue = "h-80 xs:w-[80%] md:w-[50%] bg-gradient-to-br from-cyan-600 to-blue-400 flex flex-col p-8 items-center justify-center rounded shadow-2xl shadow-gray-400",
-	purple = "h-80 xs:w-[80%] md:w-[50%] bg-gradient-to-br from-purple-600 to-blue-400 flex flex-col p-8 items-center justify-center rounded shadow-2xl shadow-gray-400"
+	purple = "h-80 xs:w-[80%] md:w-[50%] bg-gradient-to-br from-purple-600 to-blue-400 flex flex-col p-8 items-center justify-center rounded shadow-2xl shadow-gray-400",
+	black = "h-80 xs:w-[80%] md:w-[50%] bg-gradient-to-br from-gray-800 to-gray-500 flex flex-col p-8 items-center justify-center rounded shadow-2xl shadow-gray-400"
 }
 
 export default function QuoteView() {
@@ -58,9 +59,9 @@ export default function QuoteView() {
 					/>
 				</div>
 				<div className={selectedTheme}>
-					<div className="flex flex-row">
+					<div className="flex flex-row items-center justify-center">
 						<h1 className="text-6xl text-white font-mono">"</h1>
-						<h1 className="text-3xl font-regular text-white text-center flex items-center justify-center w-[50%] italic">
+						<h1 className="text-3xl font-regular text-white text-center flex items-center justify-center italic">
 							{quoteText}
 						</h1>
 						<h1 className="text-6xl text-white font-mono">"</h1>
@@ -88,6 +89,13 @@ export default function QuoteView() {
 						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-purple-600"
 						name="colorOption"
 						id="purple"
+						onChange={handleColorChange}
+					/>
+					<input
+						type="radio"
+						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-purple-600"
+						name="colorOption"
+						id="black"
 						onChange={handleColorChange}
 					/>
 				</div>
