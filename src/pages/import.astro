@@ -1,16 +1,43 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+function handleFileUpload(event: any) {
+  console.log(event);
+}
 ---
 
 <MainLayout title="import">
   <div class="h-full w-full">
-    <div class="w-full flex justify-center items-center h-full absolute mt-20">
+    <div class="w-full flex justify-center items-center h-full absolute">
       <img
         class="absolute object-cover h-[100%] flex opacity-20"
         src="/src/assets/astrobg.png"
         alt=""
       />
     </div>
-    <div class="relative mt-40"></div>
+    <div
+      class="relative mt-20 flex flex-col items-center justify-center space-y-2"
+    >
+      <input
+        type="file"
+        name="quote"
+        id="quoteImage"
+        class="rounded p-2 bg-gray-200 file:bg-orange-600 file:border-none file:text-white file:p-2 file:rounded file:text-sm file:font-bold"
+      />
+      <input
+        class="p-2 bg-gray-200 w-80 h-12 rounded"
+        placeholder="author"
+        type="text"
+      />
+      <input
+        class="p-2 bg-gray-200 w-80 h-12 rounded"
+        placeholder="category"
+        type="text"
+      />
+      <button
+        class="bg-black text-white p-2 h-12 rounded w-40 hover:bg-gray-800 active:bg-orange-600"
+        type="button">upload</button
+      >
+    </div>
   </div>
 </MainLayout>
