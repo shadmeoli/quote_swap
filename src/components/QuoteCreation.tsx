@@ -66,7 +66,7 @@ export default function QuoteView() {
 				<div className="h-20 w-full py-10 flex items-center justify-center space-x-2">
 					<input
 						type="radio"
-						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none checked:bg-orange-600"
+						className="h-10 w-10 rounded-full border-2 border-black focus:outline-none selection:bg-orange-600 checked:bg-orange-600"
 						name="colorOption"
 						id="orange"
 						onChange={handleColorChange}
