@@ -1,13 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
-import type { TQuote } from "../interfaces/QuoteT";
+import dotenv from "dotenv";
 
-const supabase = createClient(
-    import.meta.env.SUPABASE_URL,
-    import.meta.env.SUPABASE_ANON_KEY,
-);
+dotenv.config();
 
-async function createQuote(packet: TQuote) {
-    return packet
-}
+const supabaseUrl = process.env.SUPABASE_URL ?? '';
+const supabaseKey = process.env.SUPABASE_ANON_KEY ?? '';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-export { supabase, createQuote }
+export { supabase }

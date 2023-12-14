@@ -20,6 +20,7 @@
     "astro": "^4.0.4",
     "axios": "^1.6.2",
     "dom-to-image": "^2.6.0",
+    "dotenv": "^16.3.1",
     "downloadjs": "^1.4.7",
     "framer-motion": "^10.16.16",
     "html-to-image": "^1.11.11",
