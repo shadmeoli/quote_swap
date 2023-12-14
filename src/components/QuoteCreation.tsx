@@ -21,10 +21,11 @@ export default function QuoteView() {
 	}
 
 	function downloadQuote() {
+		const scale = 10;
 		const container = quoteContainerRef.current;
 
 		if (container) {
-			html2canvas(container).then((canvas) => {
+			html2canvas(container, { scale }).then((canvas) => {
 				const dataURL = canvas.toDataURL();
 				const a = document.createElement("a");
 				a.href = dataURL;
