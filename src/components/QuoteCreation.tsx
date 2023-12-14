@@ -1,13 +1,12 @@
 import React from "react";
-
+import html2canvas from "html2canvas";
 import { Theme } from "../constants/Themes";
 
 export default function QuoteView() {
 
+	const quoteContainerRef = React.useRef(null);
 	const [quoteText, setQuoteText] = React.useState<string>();
 	const [signature, setSignature] = React.useState<string>();
-
-
 	const [selectedTheme, setSelectedTheme] = React.useState<string>(Theme.orange);
 
 	function handleColorChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -19,6 +18,22 @@ export default function QuoteView() {
 		setQuoteText("")
 		setSignature("")
 		alert("Quote created")
+	}
+
+	function downloadQuote() {
+		const container = quoteContainerRef.current;
+
+		if (container) {
+			html2canvas(container).then((canvas) => {
+				const dataURL = canvas.toDataURL();
+				const a = document.createElement("a");
+				a.href = dataURL;
+				a.download = "quote.png";
+				document.body.appendChild(a);
+				a.click();
+				document.body.removeChild(a);
+			});
+		}
 	}
 
 	return (
@@ -52,7 +67,7 @@ export default function QuoteView() {
 					/>
 					{/* TODO -  create a modal for a user to choose a category for the quote */}
 				</div>
-				<div className={selectedTheme}>
+				<div id="userCreatedQuote" ref={quoteContainerRef} className={selectedTheme}>
 					<div className="flex flex-row items-center justify-center">
 						<h1 className="text-6xl text-white font-mono">"</h1>
 						<h1 className="text-3xl font-regular text-white text-center flex items-center justify-center italic">
@@ -94,7 +109,7 @@ export default function QuoteView() {
 					/>
 				</div>
 
-				<button className="px-10 py-4 bg-black rounded-xl text-white font-bold hover:bg-gray-800 active:bg-orange-600">Donwoad</button>
+				<button onClick={downloadQuote} className="px-10 py-4 bg-black rounded-xl text-white font-bold hover:bg-gray-800 active:bg-orange-600">Donwoad</button>
 			</div>
 		</>
 	)
