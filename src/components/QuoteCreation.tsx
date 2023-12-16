@@ -21,6 +21,7 @@ export default function QuoteView() {
 	}
 
 	function downloadQuote() {
+
 		const scale = 10;
 		const container = quoteContainerRef.current;
 
