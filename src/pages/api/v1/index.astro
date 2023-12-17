@@ -1,15 +1,5 @@
 ---
-function copyToClipboard() {
-  navigator.clipboard
-    .writeText("/api/v1/quote")
-    .then(() => {
-      console.log("Text successfully copied to clipboard:", "/api/v1/quote");
-      alert("Endpoint copied successfully");
-    })
-    .catch((err) => {
-      console.error("Unable to copy text to clipboard:", err);
-    });
-}
+
 ---
 
 <div
@@ -36,7 +26,7 @@ function copyToClipboard() {
     >
     </div>
     <button
-      onclick={copyToClipboard()}
+      onclick="copyToClipboard()"
       class="bg-gray-900 relative rounded-xl text-gray-200 px-7 py-8 flex flex-row items-center justify-center h-14 space-x-4 divide-x-4 divide-gray-600 w-[400px]"
     >
       <span class="pr-2 font-extrabold text-gray-600 text-xl">POST</span>
@@ -47,3 +37,17 @@ function copyToClipboard() {
     </button>
   </div>
 </div>
+
+<script>
+  function copyToClipboard() {
+    navigator.clipboard
+      .writeText("/api/v1/quote")
+      .then(() => {
+        console.log("Text successfully copied to clipboard:", "/api/v1/quote");
+        alert("Endpoint copied successfully");
+      })
+      .catch((err) => {
+        console.error("Unable to copy text to clipboard:", err);
+      });
+  }
+</script>
