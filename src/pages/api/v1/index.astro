@@ -36,13 +36,14 @@ function copyToClipboard() {
     >
     </div>
     <button
+      onclick={copyToClipboard()}
       class="bg-gray-900 relative rounded-xl text-gray-200 px-7 py-8 flex flex-row items-center justify-center h-14 space-x-4 divide-x-4 divide-gray-600 w-[400px]"
     >
-      <span class="pr-2 font-extrabold text-gray-600 text-xl"> POST</span>
+      <span class="pr-2 font-extrabold text-gray-600 text-xl">POST</span>
       <span
         class="pl-6 font-light text-gray-400 tracking-[0.4em] font-mono flex-row flex items-center justify-center"
-        >/api/v1/quote &rarr;
-      </span>
+        >/api/v1/quote &rarr;</span
+      >
     </button>
   </div>
 </div>
