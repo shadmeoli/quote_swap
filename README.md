@@ -15,7 +15,7 @@ QuoteSwap is a minimalist web app that allows users to anonymously share and swa
 
 ## Getting Started
 
-1. Clone the repository:
+1. Form the repository and clone it:
 
    ```bash
    git clone https://github.com/yourusername/quoteswap.git
@@ -33,7 +33,7 @@ If you'd like to contribute to QuoteSwap, please follow these guidelines:
 
 2. Create a new branch for your feature:
 
-   ```bash
+   ```
    git checkout -b feature/your-feature-name
    ```
 
