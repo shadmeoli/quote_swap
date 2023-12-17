@@ -1,5 +1,15 @@
 ---
-
+function copyToClipboard() {
+  navigator.clipboard
+    .writeText("/api/v1/quote")
+    .then(() => {
+      console.log("Text successfully copied to clipboard:", "/api/v1/quote");
+      alert("Endpoint copied successfully");
+    })
+    .catch((err) => {
+      console.error("Unable to copy text to clipboard:", err);
+    });
+}
 ---
 
 <div
