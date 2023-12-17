@@ -1,6 +1,7 @@
 import React from "react";
 import html2canvas from "html2canvas";
 import { Theme } from "../constants/Themes";
+import axios from "axios";
 
 export default function QuoteView() {
 
@@ -14,11 +15,26 @@ export default function QuoteView() {
 		setSelectedTheme(Theme[themeId]);
 	}
 
-	function handleQuoteCreation() {
-		setQuoteText("")
-		setSignature("")
-		alert("Quote created")
+	async function handleQuoteCreation() {
+		try {
+			setQuoteText("");
+			setSignature("");
+
+			const response = await axios.post("http://localhost:4321/api/quote", {
+				author: signature,
+				quote: quoteText
+			});
+			const data = response.data;
+
+			setQuoteText(data.quoteText || "");
+			setSignature(data.signature || "");
+			alert(data.msg)
+		} catch (error) {
+			console.error("Error fetching data:", error);
+		}
 	}
+
+
 
 	function downloadQuote() {
 
