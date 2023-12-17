@@ -1,9 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-
-function handleFileUpload(event: any) {
-  console.log(event);
-}
 ---
 
 <MainLayout title="import">
@@ -41,3 +37,9 @@ function handleFileUpload(event: any) {
     </div>
   </div>
 </MainLayout>
+
+<script>
+  function handleFileUpload(event: any) {
+    console.log(event);
+  }
+</script>
