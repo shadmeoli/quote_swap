@@ -31,6 +31,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         type="text"
       />
       <button
+        upload-image
         class="bg-black text-white p-2 h-12 rounded w-40 hover:bg-gray-800 active:bg-orange-600"
         type="button">upload</button
       >
@@ -39,7 +40,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <script>
-  function handleFileUpload(event: any) {
-    console.log(event);
-  }
+  const button = document.getElementById("uploadImage");
+
+  button?.addEventListener("click", () => {
+    let quote_image = window.document.getElementById("quoteImage");
+    let imageUrl = quote_image?.accessKeyLabel;
+    console.log(imageUrl);
+  });
 </script>
