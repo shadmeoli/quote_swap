@@ -11,7 +11,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         alt=""
       />
     </div>
-    <div
+    <form
+      method="post"
       class="relative mt-20 flex flex-col items-center justify-center space-y-2"
     >
       <input
@@ -33,9 +34,9 @@ import MainLayout from "../layouts/MainLayout.astro";
       <button
         upload-image
         class="bg-black text-white p-2 h-12 rounded w-40 hover:bg-gray-800 active:bg-orange-600"
-        type="button">upload</button
+        type="submit">upload</button
       >
-    </div>
+    </form>
   </div>
 </MainLayout>
 
