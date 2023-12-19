@@ -1,8 +1,6 @@
 import type { APIRoute } from "astro";
 import { supabase } from "../../../lib/supabase";
 
-
-
 export const POST: APIRoute = async ({ request, redirect }) => {
   try {
     const { author, quote } = await request.json();
@@ -33,3 +31,12 @@ export const POST: APIRoute = async ({ request, redirect }) => {
     });
   }
 };
+
+export async function GET({ params, request }) {
+  return new Response(
+    JSON.stringify({
+      name: 'Astro',
+      url: 'https://astro.build/'
+    })
+  )
+}

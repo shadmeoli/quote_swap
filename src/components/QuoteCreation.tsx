@@ -34,8 +34,6 @@ export default function QuoteView() {
 		}
 	}
 
-
-
 	function downloadQuote() {
 
 		const scale = 10;
