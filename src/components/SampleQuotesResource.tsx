@@ -33,7 +33,7 @@ export default function SampleView() {
 
 	React.useEffect(() => {
 		getQuotes();
-	}, [quoteCategory]); // Add quoteCategory as a dependency
+	}, [quoteCategory]);
 
 	function switchCategory(value: string) {
 		setQuoteCategory(value);
