@@ -32,7 +32,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
   }
 };
 
-export async function GET({ params, request }) {
+export async function GET() {
   return new Response(
     JSON.stringify({
       name: 'Astro',
