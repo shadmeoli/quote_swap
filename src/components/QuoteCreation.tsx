@@ -20,11 +20,15 @@ export default function QuoteView() {
 			setQuoteText("");
 			setSignature("");
 
-			const response = await axios.post("http://localhost:4321/api/quote", {
+			const response = await axios.post("http://localhost:4321/api/v1/quote", {
 				author: signature,
 				quote: quoteText
 			});
 			const data = response.data;
+			
+			if (response.status !== 200) {
+				alert(response.data.message)
+			}
 
 			setQuoteText(data.quoteText || "");
 			setSignature(data.signature || "");

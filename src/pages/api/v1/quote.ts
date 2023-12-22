@@ -10,6 +10,8 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       { author, quote: quote }
     ]);
 
+    console.log(error)
+
     if (error) {
       console.error('Error saving data to Supabase:');
       console.log(author, quote);
