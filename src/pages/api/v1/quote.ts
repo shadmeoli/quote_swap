@@ -37,8 +37,10 @@ export const POST: APIRoute = async ({ request, redirect }) => {
 export async function GET() {
   return new Response(
     JSON.stringify({
-      name: 'Astro',
-      url: 'https://astro.build/'
+      quote_status: "created",
+      saved_to_database: true,
+      quote_id: Math.random(); // to generate random numbe to use it as quite_ID.
     })
   )
 }
+
