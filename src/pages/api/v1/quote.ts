@@ -39,7 +39,7 @@ export async function GET() {
     JSON.stringify({
       quote_status: "created",
       saved_to_database: true,
-      quote_id: Math.random(); // to generate random numbe to use it as quite_ID.
+      quote_id: Math.random()
     })
   )
 }
