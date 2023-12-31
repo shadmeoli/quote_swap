@@ -10,6 +10,7 @@ export default function QuoteView() {
 	const [quoteText, setQuoteText] = React.useState<string>();
 	const [signature, setSignature] = React.useState<string>();
 	const [selectedTheme, setSelectedTheme] = React.useState<string>(Theme.orange);
+	const [selectedCategory, setSelectedCategory] = React.useState<string>();
 
 	function handleColorChange(event: React.ChangeEvent<HTMLInputElement>) {
 		const themeId = event.target.id as keyof typeof Theme;
@@ -56,6 +57,10 @@ export default function QuoteView() {
 		}
 	}
 
+	function handleCategoryChange(event: any) {
+		setSelectedCategory(event.target.value);
+	}
+
 	return (
 		<>
 			<div
@@ -85,7 +90,6 @@ export default function QuoteView() {
 						placeholder="Enter your quote here"
 						type="text"
 					/>
-					{/* TODO -  create a modal for a user to choose a category for the quote */}
 
 					<select
 						name="categories"
@@ -93,7 +97,7 @@ export default function QuoteView() {
 						className="appearance-none bg-white border-4 border-orange-500 text-orange-500 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-orange-700 focus:shadow-outline-orange"
 					>
 						{categories?.map((category) => (
-							<option className="" key={category} value={category}>
+							<option key={category} value={category}>
 								{category}
 							</option>
 						))}
