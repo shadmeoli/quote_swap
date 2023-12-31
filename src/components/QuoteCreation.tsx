@@ -94,7 +94,7 @@ export default function QuoteView() {
 					<select
 						name="categories"
 						id="quoteCategories"
-						className="appearance-none bg-white border-4 rounded border-orange-500 text-orange-500 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-orange-700 focus:shadow-outline-orange"
+						className="appearance-none bg-white border-4 border-orange-500 text-orange-500 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-orange-700 focus:shadow-outline-orange"
 					>
 						{categories?.map((category) => (
 							<option key={category} value={category}>
