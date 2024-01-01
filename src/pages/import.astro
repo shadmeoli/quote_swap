@@ -35,9 +35,7 @@ import { categories } from "../constants/categories";
       >
         {
           categories?.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
+            <option value={category}>{category}</option>
           ))
         }
       </select>
