@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { categories } from "../constants/categories";
 ---
 
 <MainLayout title="import">
@@ -27,11 +28,19 @@ import MainLayout from "../layouts/MainLayout.astro";
         placeholder="author"
         type="text"
       />
-      <input
-        class="p-2 bg-gray-200 w-80 h-12 rounded"
-        placeholder="category"
-        type="text"
-      />
+      <select
+        name="categories"
+        id="quoteCategories"
+        class="w-80 h-12 appearance-none bg-white border-4 border-orange-500 text-orange-500 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-orange-700 focus:shadow-outline-orange"
+      >
+        {
+          categories?.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))
+        }
+      </select>
       <button
         upload-image
         class="bg-black text-white p-2 h-12 rounded w-40 hover:bg-gray-800 active:bg-orange-600"
