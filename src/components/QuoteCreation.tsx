@@ -23,7 +23,8 @@ export default function QuoteView() {
 
 			const response = await axios.post("http://localhost:4321/api/v1/quote", {
 				author: signature,
-				quote: quoteText
+				quote: quoteText,
+				category: selectedCategory
 			});
 			const data = response.data;
 
@@ -146,7 +147,7 @@ export default function QuoteView() {
 					/>
 				</div>
 
-				<button onClick={downloadQuote} className="px-10 py-4 bg-black rounded-xl text-white font-bold hover:bg-gray-800 active:bg-orange-600">Donwoad</button>
+				<button onClick={downloadQuote} className="px-10 py-4 bg-black rounded-xl text-white font-bold hover:bg-gray-800 active:bg-orange-600">Download</button>
 			</div>
 		</>
 	)
